@@ -1,88 +1,12 @@
-.button--poll {
-	align-items: center;
-	background: grey;
-	border-color: black;
-	border-radius: 0;
-	border-width: 2px;
-	cursor: pointer;
-	display: inline-flex;
-	font-family: "Times New Roman";
-	font-weight: 700;
-	min-height: 16px;
-	padding: 2px 4px 2px 2px;
-	position: relative;
-	white-space: nowrap;
-  
-  /* Zoom */
-  zoom: 1.5;
-
-	&:hover,
-	&:focus {
-		outline: 1px dotted var(--c-link);
-	}
-
-	&:active {
-		border-color: var(--color-cod-gray) transparent transparent var(--color-cod-gray);
-    padding: 4px 2px 0px 4px;
-	}
-
-	&::before {
-		align-items: center;
-		background: var(--color-royal-blue);
-		content: "🏆";
-		display: flex;
-		flex: 0 0 24px;
-		font-size: 14px;
-		height: 16px;
-		justify-content: center;
-		line-height: 0;
-		margin-right: 4px;
-		overflow: hidden;
-		padding-top: 2px;
-		width: 24px;
-	}
-
-	.button--MAFS {
-	align-items: center;
-	background: grey;
-	border-color:black;
-	border-radius: 0;
-	border-width: 2px;
-	cursor: pointer;
-	display: inline-flex;
-	font-family: "Times New Roman";
-	font-weight: 700;
-	min-height: 16px;
-	padding: 2px 4px 2px 2px;
-	position: relative;
-	white-space: nowrap;
-  
-  /* Zoom */
-  zoom: 1.5;
-
-	&:hover,
-	&:focus {
-		outline: 1px dotted var(--c-link);
-	}
-
-	&:active {
-		border-color: var(--color-cod-gray) transparent transparent var(--color-cod-gray);
-    padding: 4px 2px 0px 4px;
-	}
-
-	&::before {
-		align-items: center;
-		background: var(--color-royal-blue);
-		content: "💍";
-		display: flex;
-		flex: 0 0 24px;
-		font-size: 14px;
-		height: 16px;
-		justify-content: center;
-		line-height: 0;
-		margin-right: 4px;
-		overflow: hidden;
-		padding-top: 2px;
-		width: 24px;
-	}
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
 
