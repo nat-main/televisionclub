@@ -1,27 +1,3 @@
-
-:root {
-  /* Project Colors */
-	--color-cod-gray: #111;
-	--color-seashell: #f1f1f1;
-	--color-silver: #ccc;
-	--color-white: #fff;
-	--color-gallery: #eee;
-	--color-mercury: #e6e6e6;
-	--color-shalimar: #fff9c0;
-	--color-jelly-bean: #21759b;
-	--color-dove-gray: #666;
-	--color-royal-blue: #4169e1;
-	--color-fresh-eggplant: #800080;
-	--color-lucky-point: #191970;
-	--color-tundora: #404040;
-	--color-black: #000;
-
-	--c-background-button-netscape: var(--color-silver);
-	--c-link: blue;
-}
-
-
-/* 90s Netscape button */
 .button--poll {
 	align-items: center;
 	background: var(--c-background-button-netscape);
@@ -66,15 +42,6 @@
 		padding-top: 2px;
 		width: 24px;
 	}
-}
-
-.button--theme {
-  &::before {
-    background: var(--color-cod-gray);
-    content: "💡";
-    text-shadow: 0 0 4px #FF6;
-  }
-}
 
 .button--MAFS {
   background: var(--color-cod-gray);
@@ -86,42 +53,5 @@
 		background: #660000;
     content: "💍";
     text-shadow: 0 0 4px black;
-  }
-}
-
-.button--text {
-  font-size: 10px;
-  
-  & em {
-    color: red;
-    font-family: cursive;
-    display: block;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1;
-    padding: 0 4px 0 2px;
-  }
-  
-  &::before {
-		background: #006633;
-    content: "💸";
-    text-shadow: 0 0 9px yellow;
-  }
-}
-
-.button--letter {
-  
-  font-size: 20px;
-  line-height: 1;
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px #000000;
-  font-style: italic;
-  
-  &::before {
-		background: #003366;
-    content: "🌎";
-    text-shadow: 0 0 3px hsla(0deg, 0%, 100%, 0.5);
-    font-style: normal;
   }
 }
