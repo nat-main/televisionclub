@@ -1,7 +1,7 @@
 .button--poll {
 	align-items: center;
-	background: var(--c-background-button-netscape);
-	border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
+	background: grey;
+	border-color: black;
 	border-radius: 0;
 	border-width: 2px;
 	cursor: pointer;
@@ -44,8 +44,8 @@
 
 	.button--MAFS {
 	align-items: center;
-	background: var(--c-background-button-netscape);
-	border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
+	background: grey;
+	border-color:black;
 	border-radius: 0;
 	border-width: 2px;
 	cursor: pointer;
