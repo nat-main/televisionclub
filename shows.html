@@ -1,8 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
+
+<head>
+    <title>TV Club</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        .container {
+            position: top;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 96px;
+            color: white;
+        }
+
+        .content {
+            /*height: 100vh;*/
+            display: grid;
+            position: top;
+            place-items: center;
+
+            z-index: 5;
+            position: relative;
+        }
+
+        .fuzzy-overlay {
+            position: absolute;
+            inset: -200%;
+            background-image: url("noise.png");
+            opacity: 50%;
+            z-index: 0;
+            /* pointer-events: none; */
+
+            animation: shift 0.2s linear infinite both;
+        }
+
+        @keyframes shift {
+            0% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+    </style>
+</head>
+
 <body>
     <div class="container">
         <div class="content">
@@ -11,15 +67,25 @@
             <br>
             <br>
             <br>
-            <h1>Nurse Colleen McMurphy</h1>
+            <h1>Nurse Colleen McMurphy:</h1>
             <br>
             <br>
             <img src="NurseColleenMcMurphy.png">
             <br>
-            <br>       
+            <br>
+            <p style="text-align: center;">
+                <br>
+            <br>
+            <br>
+            </p>
+            <br>
+            <br>
+            <br>
         </div>
     
         <div class="fuzzy-overlay"></div>
     </div>
 </body>
+
 </html>
+
