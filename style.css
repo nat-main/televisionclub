@@ -29,7 +29,7 @@
 	&::before {
 		align-items: center;
 		background: var(--color-royal-blue);
-		content: "😠";
+		content: "🏆";
 		display: flex;
 		flex: 0 0 24px;
 		font-size: 14px;
