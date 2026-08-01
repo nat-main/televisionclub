@@ -1,47 +1,19 @@
+<style> 
+    #canvas {
+        z-index: -100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        background-color: #fff;
+    }
+    h1 {
+        color: green;
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+    body {
+        text-align: center;
+    }
+</style>
 
-body {
-    background-color:white
-}
-
-h1 {
-    font-size: 18px;
-  }
-
-  .center {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .name {
-    font-style: bold;
-    font-family:Arial, Helvetica, sans-serif;
-    padding: 25px;
-    font-size: 72px;
-    text-align: center;
-    color: blue;
-  }
-
-
-  .bio {
-    font-family:Arial, Helvetica, sans-serif;
-    width: 600px;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    color: blue;
-  }
-
-  .button {
-   font-family:Arial, Helvetica, sans-serif;
-   color: blue;
-   padding: 20px;
-   text-align: center;
-   font-size: 12px;
-   width: 600px;
-   margin: 4px 2px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
