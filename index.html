@@ -1,4 +1,109 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Static Background</title>
+  <style>
+    /* Reset margins and hide scrollbars */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    /* Fixed background container for the static effect */
+    .static-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; 
+      opacity: 0.15; /* Adjust opacity to make it subtle or prominent */
+      pointer-events: none; /* Allows user to click things underneath */
+    }
+
+    #staticCanvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Target content styling layer placed above the background */
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The Background Layer -->
+  <div class="static-container">
+    <canvas id="staticCanvas"></canvas>
+  </div>
+
+  <!-- The Foreground Content Layer -->
+  <div class="content">
+    <h1>NO SIGNAL</h1>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('staticCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Resize canvas to match the screen
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Render loop for static noise
+    function renderStatic() {
+      const width = canvas.width;
+      const height = canvas.height;
+      
+      // Fetch underlying pixel array data structure
+      const imgData = ctx.createImageData(width, height);
+      const data = imgData.data;
+      const length = data.length;
+
+      // Loop through all pixels and randomize grayscale values
+      for (let i = 0; i < length; i += 4) {
+        const noise = Math.floor(Math.random() * 255); 
+        data[i]     = noise; // Red
+        data[i + 1] = noise; // Green
+        data[i + 2] = noise; // Blue
+        data[i + 3] = 255;   // Alpha (fully opaque)
+      }
+
+      ctx.putImageData(imgData, 0, 0);
+      
+      // Request next browser animation frame for high-performance looping
+      requestAnimationFrame(renderStatic);
+    }
+
+    // Initialize animation loop
+    renderStatic();
+  </script>
+
+</body>
+</html>
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
