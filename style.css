@@ -1,19 +1,4 @@
 <style> 
-    #canvas {
-        z-index: -100;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-        background-color: #fff;
-    }
-    h1 {
-        color: green;
-        font-size: 50px;
-        margin-bottom: 0;
-    }
-    body {
-        text-align: center;
-    }
+  
 </style>
 
