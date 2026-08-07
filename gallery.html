@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TV Club</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        .container {
+            position: top;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 96px;
+            color: white;
+        }
+
+        .content {
+            /*height: 100vh;*/
+            display: grid;
+            position: top;
+            place-items: center;
+
+            z-index: 5;
+            position: relative;
+        }
+
+        .fuzzy-overlay {
+            position: absolute;
+            inset: -200%;
+            background-image: url("noise.png");
+            opacity: 25%;
+            z-index: 0;
+            /* pointer-events: none; */
+
+            animation: shift 0.2s linear infinite both;
+        }
+
+        @keyframes shift {
+            0% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2 class="title">TV Club</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Married At First Sight</h1>
+            <br>
+            <!DOCTYPE html>
+            <html>
+            <style>
+            table, th, td {
+              border:1px solid black;
+            }
+            </style>
+            <body>
+            
+            <h2>Will They Get Married Or Will They Get A Divorce</h2>
+            
+            <table style="width:100%">
+              <tr>
+                <th>Meg</th>
+                <th>Nat</th>
+                <th>Bri</th>
+                <th>Katie</th>
+              </tr>
+              <tr>
+                <td>Mecca & BelleJolie</td>
+                <td>Adam & Marissa</td>
+                <td>Courteney & Nick</td>
+                <td>Felipe & Tori</td>
+                <td>Nikki & Shawn</td>
+                <td>Caitlin & Devin</td>
+                <td>Cameron & Michelle</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>14</td>
+                <td>10</td>
+              </tr>
+            </table>
+            
+            <p></p>
+            
+            </body>
+            </html>
+
+        </div>
+    
+        <div class="fuzzy-overlay"></div>
+    </div>
+</body>
+
+</html>
