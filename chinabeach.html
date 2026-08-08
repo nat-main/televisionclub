@@ -1,66 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-            <link rel="stylesheet" href="style.css">
-
-    <title>TV Club</title>
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-        }
-
-        body {
-            background: black;
-            color: white;
-        }
-
-        .container {
-            position: top;
-            overflow: hidden;
-        }
-
-        .title {
-            font-size: 96px;
-            color: white;
-        }
-
-        .content {
-            /*height: 100vh;*/
-            display: grid;
-            position: top;
-            place-items: center;
-
-            z-index: 5;
-            position: relative;
-        }
-
-        .fuzzy-overlay {
-            position: absolute;
-            inset: -200%;
-            background-image: url("noise.png");
-            opacity: 50%;
-            z-index: 0;
-            /* pointer-events: none; */
-
-            animation: shift 0.2s linear infinite both;
-        }
-
-        @keyframes shift {
-            0% {
-                transform: translateX(10%) translateY(10%);
-            }
-
-            100% {
-                transform: translateX(-10%) translateY(-10%);
-            }
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
+<title>TV Club</title>
 </head>
-
 <body>
     <div class="container">
         <div class="content">
@@ -70,16 +13,15 @@
             <br>
             <br>
             <br>
-      
             <img src="China_Beach_(television_series_logo).png">
             <br>
             <br>
               <p style="text-align: center;">
-Episode 1 - 2 (two-part pilot - "Home" 4/26/88 and "Hot Spell" 5/3/88)<br>
-Episode 3 ("Somewhere Over the Radio" 5/10/88)<br>
-Episode 4 ("Waiting for Beckett" 5/17/88)<br>
-Episode 5 ("Brothers"  5/31/88)<br>
-Episode 6 ("Chao Ong" 6/7/88)<br>
+                        Episode 1 - 2 (two-part pilot - "Home" 4/26/88 and "Hot Spell" 5/3/88)<br>
+                        Episode 3 ("Somewhere Over the Radio" 5/10/88)<br>
+                        Episode 4 ("Waiting for Beckett" 5/17/88)<br>
+                        Episode 5 ("Brothers"  5/31/88)<br>
+                        Episode 6 ("Chao Ong" 6/7/88)<br>
             <br>
             <br>
                   We met on 8/7/26 and 7/31/26 to discuss season one.
@@ -91,7 +33,7 @@ Episode 6 ("Chao Ong" 6/7/88)<br>
                   <a href="gallery.html"<button class="button">
              Image Gallery</button> </a>
                 <br>
-                  
+
                   <a href="poll.html"<button class="button">
              Voted Most Annoying Character</button> </a>
                 <br>
@@ -102,8 +44,6 @@ Episode 6 ("Chao Ong" 6/7/88)<br>
             <br>
             <br>
         </div>
-    
-        <div class="fuzzy-overlay"></div>
     </div>
 </body>
 
