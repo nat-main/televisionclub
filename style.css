@@ -31,3 +31,8 @@
 	max-width: 1170px;
 	margin:auto;
 }
+.gallery .gallery-filter .filter-item.active{
+  color: white;
+  border-color : #16b5ef;
+  background: #16b5ef;
+}
