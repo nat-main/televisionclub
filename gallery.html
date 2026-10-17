@@ -1,300 +1,86 @@
 <!DOCTYPE html>
-<!-- Design by foolishdeveloper.com-->
-<html lang="en">
+<html>
+    <div class="tv-static">
 <head>
-  <title>filterable gallery</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style media="screen">
-
-body{
-	line-height: 1.5;
-	font-family: sans-serif;
-}
-*{
-	margin:0;
-	box-sizing: border-box;
-}
-.container{
-	max-width: 1170px;
-	margin:auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
-img{
-	max-width: 100%;
-	vertical-align: middle;
-}
-/*.gallery*/
-.gallery{
-	width: 100%;
-	display: block;
-	min-height: 100vh;
-	background-color: #2a2932;
-	padding: 100px 0;
-}
-.gallery .gallery-filter{
-	padding: 0 15px;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 40px;
-}
-.gallery .gallery-filter .filter-item{
-	color: #ffffff;
-	font-size: 17px;
-  border: 2px solid white;
-	text-transform: uppercase;
-	display: inline-block;
-  border-radius: 20px;
-  margin-right: 8px;
-	cursor: pointer;
-  padding: 8px 20px 8px 20px;
-	line-height: 1.2;
-	transition: all 0.3s ease;
-}
-.gallery .gallery-filter .filter-item.active{
-	color: white;
-	border-color : #16b5ef;
-  background: #16b5ef;
-}
-.gallery .gallery-item{
-	width: calc(100% / 3);
-	padding: 15px;
-
-}
-.gallery .gallery-item-inner img{
-	width: 100%;
-  border: 3px solid #d4dad9;
-}
-.gallery .gallery-item.show{
-	animation: fadeIn 0.5s ease;
-}
-@keyframes fadeIn{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
-}
-.gallery .gallery-item.hide{
-	display: none;
-}
-
-/*responsive*/
-@media(max-width: 491px){
-	.gallery .gallery-item{
-		width: 50%;
-	}
-}
-@media(max-width: 467px){
-    .gallery .gallery-item{
-		width: 100%;
-	}
-	.gallery .gallery-filter .filter-item{
-		margin-bottom: 10px;
-	}
-}
-
-  </style>
+<link rel="stylesheet" href="style.css">
+<title>TV Club</title>
 </head>
+        <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        .container {
+            position: top;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 96px;
+            color: white;
+        }
+
+        .content {
+            /*height: 100vh;*/
+            display: grid;
+            position: top;
+            place-items: center;
+
+            z-index: 5;
+            position: relative;
+        }
+
+        .fuzzy-overlay {
+            position: absolute;
+            inset: -200%;
+            background-image: url("noise.png");
+            opacity: 25%;
+            z-index: 0;
+            /* pointer-events: none; */
+
+            animation: shift 0.2s linear infinite both;
+        }
+
+        @keyframes shift {
+            0% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+    </style>
 <body>
+    <div class="container">
+        <div class="content">
+               <a href="index.html">
+            <h2 class="title">TV Club</h2>
+                   </a>
+            <br>
+            <br>
+            <br>
+                        <h2 class="title">Gallery Under Repair</h2>
 
-<section class="gallery">
-	<div class="container">
-		<div class="row">
-			<div class="gallery-filter">
-				<span class="filter-item active" data-filter="all">all</span>
-				<span class="filter-item" data-filter="nakedcity">Naked City</span>
-				<span class="filter-item" data-filter="family">family</span>
-				<span class="filter-item" data-filter="camera">camera</span>
-        <span class="filter-item" data-filter="phone">Phone</span>
-			</div>
-		</div>
-		<div class="row">
-			<!-- gallery item start -->
-			<div class="gallery-item shoe">
-				<div class="gallery-item-inner">
-					<img src="https://1.bp.blogspot.com/-QvLveiaH3VI/YS_C1lXw6-I/AAAAAAAACa0/1hIbUlfQUQ8ew--PZ8IYB_55WFYTX8OtQCNcBGAsYHQ/s0/shoe-1.jpg" alt="shoe">
-				</div>
-			</div>
-			<!-- gallery item end -->
-			<!-- gallery item start -->
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_MW2.png" alt="family">
-				</div>
-			</div>
-			<!-- gallery item end -->
-			<!-- gallery item start -->
-			<div class="gallery-item camera">
-				<div class="gallery-item-inner">
-					<img src="https://1.bp.blogspot.com/-I4zq8AEp_jY/YS_C3MiTUqI/AAAAAAAACa8/GjRpPmI0eqE_g52nIv7gUrh_9AGQbQkoACNcBGAsYHQ/s0/camera-1.jpg" alt="camera">
-				</div>
-			</div>
-			<!-- gallery item end -->
-			<!-- gallery item start -->
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_JW.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_JW2.png" alt="family">
-				</div>
-			</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_JW3.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_NG2.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_BC2.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_BC3.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="SS_BC4.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="https://u.cubeupload.com/natgreenesoda/IMG4262.png" alt="family">
-				</div>
-			</div>
-			<div class="gallery-item family">
-				<div class="gallery-item-inner">
-					<img src="https://u.cubeupload.com/natgreenesoda/IMG4261.png" alt="family">
-				</div>
-			</div>
-			<!-- gallery item end -->
-			<!-- gallery item start -->
-			<div class="gallery-item camera">
-				<div class="gallery-item-inner">
-					<img src="https://1.bp.blogspot.com/--7JZU9HynIU/YS_DH53WPiI/AAAAAAAACbY/ivcZm6OVbTgSfc9JWX1OE4WwKmvhcY07wCNcBGAsYHQ/s0/camera-2.jpg" alt="camera">
-				</div>
-			</div>
-			<!-- gallery item end -->
-      			<div class="gallery-item phone">
-      				<div class="gallery-item-inner">
-      					<img src="https://1.bp.blogspot.com/-wX4lusii0OE/YS_DC2BpADI/AAAAAAAACbA/tTGcB7QUQnshvW8hbEtf1-Nnj6dl3wSzgCNcBGAsYHQ/s0/phone-1.jpg" alt="phone">
-      				</div>
-      			</div>
-
-			<div class="gallery-item camera">
-				<div class="gallery-item-inner">
-					<img src="https://1.bp.blogspot.com/-12xO4l2QXGM/YS_DDwhwSYI/AAAAAAAACbI/OyLyIX89tnwmpwxcYoVED-x8uRWq56TawCNcBGAsYHQ/s0/camera-3.jpg" alt="camera">
-				</div>
-			</div>
-
-			<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_NG_01.png" alt="nakedcity">
-				</div>
-			</div>
-
-			<!-- gallery item start -->
-			<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_NG_00.png" alt="nakedcity">
-				</div>
-			</div>
-			<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_BC01.png" alt="nakedcity">
-				</div>
-			</div>
-			<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_BC0.png" alt="nakedcity">
-				</div>
-			</div>
-			<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_BC_02.png" alt="nakedcity">
-				</div>
-			</div>
-				<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_MW_00.png" alt="nakedcity">
-				</div>
-			</div>
-				<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_KL_00.png" alt="nakedcity">
-				</div>
-			</div>
-				<div class="gallery-item nakedcity">
-				<div class="gallery-item-inner">
-					<img src="SS_KL_01.png" alt="nakedcity">
-				</div>
-			
-			<!-- gallery item end -->
-		</div>
-	</div>
-</section>
-
-<script>
-
-
- const filterContainer = document.querySelector(".gallery-filter"),
- galleryItems = document.querySelectorAll(".gallery-item");
-
- filterContainer.addEventListener("click", (event) =>{
-   if(event.target.classList.contains("filter-item")){
-   	 // deactivate existing active 'filter-item'
-   	 filterContainer.querySelector(".active").classList.remove("active");
-   	 // activate new 'filter-item'
-   	 event.target.classList.add("active");
-   	 const filterValue = event.target.getAttribute("data-filter");
-   	 galleryItems.forEach((item) =>{
-       if(item.classList.contains(filterValue) || filterValue === 'all'){
-       	item.classList.remove("hide");
-       	 item.classList.add("show");
-       }
-       else{
-       	item.classList.remove("show");
-       	item.classList.add("hide");
-       }
-   	 });
-   }
- });
-</script>
-</body>
-</html>
-
-
-					<img src="SS_KL1.PNG" alt="nakedcity"><br>
-		
-					<img src="SS_KL2.PNG" alt="nakedcity"><br>
-
-                   <img src="SS_BC.png"width="20">
-                <br>
-                   <img src="SS_MW.png"width="20">
-                <br>
-                    <img src="SS_NG.png"width="20">
-            <p></p>
-            
-            </body>
-
+            <br>
+            <br>
+            <br>
+            </div>
+            <br>
+            </p>
+            <br>
+            <br>
+            <br>
         </div>
-        <div class="fuzzy-overlay"></div>
-        </div>
+    </div>
+    <div class="fuzzy-overlay"></div>
+    </div>
 </body>
-
-</html>
